@@ -6,16 +6,26 @@
   <title>Sayan - Author Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
+ 
   <header>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
     <h1>Sayan - Author of the "Chosen" Series</h1>
     <p>Where Fear Ends, Faith Begins</p>
+    <p>The Fall of the Kingmaker</p>
+    <p>The veil of darkness</p>
   </header>
 
   <section id="about">
     <img src="images/profile.jpg" alt="Sayan">
-    <h2>About Me</h2>
-    <p>I’m a computer science grad and marketing MBA student, blending tech and storytelling. The “Chosen” series is my passion project, now live on Amazon Kindle.</p>
+    <h2>About the writer</h2>
+    <p>Sayan Bandyopadhyay is a passionate storyteller, a devotee of Maa Kali, and a firm believer in the power of words to transform. A current MBA student at a renowned B-school and a Computer Science engineering graduate, Sayan worked as a Salesforce developer before finding his true voice in fiction.
+
+      <br>Blending ancient Indian mysticism with modern narrative grit, his writing explores the shadowed corners of faith, fear, and the unseen forces that shape our lives. Deeply influenced by Bengali literature and the timeless stories of divine justice, he crafts tales where the spiritual is not just symbolic—it is real, visceral, and awe-inspiring.
+      
+      <br>In Chosen, his debut novel, Sayan invites readers into a world where devotion is strength, silence is rebellion, and the Goddess walks beside those who believe. What begins as one boy’s nightmare transforms into a soul-deep awakening—and a reminder that when the world turns its back on justice, the divine does not remain silent.
+      
+      <br>If you’ve ever wondered what it means to be truly chosen, this book will show you.</p>
   </section>
 
   <section id="books">
@@ -23,34 +33,28 @@
     <div class="book-card">
       <img src="images/chosen1.jpg" alt="Book 1">
       <h3>Chosen: Where Fear Ends, Faith Begins</h3>
-      <p>A tale of courage and divinity. [Short blurb here]</p>
-      <a href="https://www.amazon.in/dp/BOOK1_ID" target="_blank">Buy on Amazon</a>
+      <p>When darkness rises and gods fall silent, a reluctant protector must confront ancient evil to save humanity—and her own soul. In a world teetering on the edge of chaos, faith might be her only weapon.</p>
+      <a href="https://amzn.in/d/iGliAUK" target="_blank">Buy on Amazon</a>
     </div>
     <div class="book-card">
       <img src="images/chosen2.jpg" alt="Book 2">
       <h3>Chosen: The Fall of the Kingmaker</h3>
-      <p>The rise of shadows, and the fall of legends.</p>
-      <a href="https://www.amazon.in/dp/BOOK2_ID" target="_blank">Buy on Amazon</a>
+      <p>A corrupt kingmaker rules from the shadows—until a boy, guided by faith and fury, dares to stand against him. In the war between power and the divine, only one will fall.</p>
+      <a href="https://amzn.in/d/fNwTCFv" target="_blank">Buy on Amazon</a>
     </div>
     <div class="book-card">
       <img src="images/chosen3.jpg" alt="Book 3">
       <h3>Chosen 3</h3>
-      <p>The final reckoning in a saga of fate and divinity.</p>
-      <a href="https://amzn.in/d/iGliAUK" target="_blank">Buy on Amazon</a>
-      <a href="https://amzn.in/d/fNwTCFv" target="_blank">Buy on Amazon</a>
+      <p>When faith is shattered and darkness whispers your name, only surrender can save your soul. Arjun must walk through hell—not to defeat evil, but to remember why he was chosen.</p>
       <a href="https://amzn.in/d/apafU7P" target="_blank">Buy on Amazon</a>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/bandyopadhyay.sayan.sb@gmail.com" method="POST"  enctype="multipart/form-data">
+    <form action="https://formspree.io/f/xovdwqzw" method="POST" enctype="multipart/form-data">
         <label>Your email:
             <input type="email" name="email">
-          </label>
-          <label>
-            Your file:
-            <input type="file" name="upload">
           </label>
       <textarea name="message" placeholder="Message"></textarea>
       <button type="submit">Send</button>
@@ -60,5 +64,26 @@
   <footer>
     <p>© 2025 Sayan. Connect with me on <a href="https://www.linkedin.com/in/sayanban/" target="_blank">LinkedIn</a></p>
   </footer>
+
+  <a href="#top" class="back-to-top" title="Go to top">↑</a>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    const backToTop = document.querySelector('.back-to-top');
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+  </script>
+   
 </body>
 </html>
